@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { useModal } from "@/components/hooks/use-modal-store";
+import { useModal } from "@/hooks/use-modal-store";
 import {
     Dialog,
     DialogContent,

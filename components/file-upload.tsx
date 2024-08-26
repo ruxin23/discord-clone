@@ -18,6 +18,8 @@ const FileUpload = ({
     value,
     endpoint
 }: FileUploadProps) => {
+    console.log('value', value);
+    console.log(onChange);
     const fileType = value?.split(".").pop();
 
     if (value && fileType !== "pdf") {

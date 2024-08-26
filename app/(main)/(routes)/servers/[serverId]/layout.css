@@ -1,0 +1,14 @@
+.serverSidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    flex-direction: column;
+    height: 100%;
+    width: 15rem;
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
