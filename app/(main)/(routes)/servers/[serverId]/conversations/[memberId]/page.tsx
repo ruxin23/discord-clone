@@ -5,6 +5,7 @@ import db from "@/lib/db";
 import { getOrCreateConversation } from "@/lib/conversation";
 import currentProfile from "@/lib/current-profile";
 import ChatHeader from "@/components/chat/chat-header";
+import ChatInput from "@/components/chat/chat-input";
 
 
 interface MemberIdPageProps {
@@ -53,6 +54,14 @@ const MemberIdPage = async ({
                 name={otherMember.profile.name}
                 serverId={params.serverId}
                 type="conversation"
+            />
+            <ChatInput
+                name={otherMember.profile.name}
+                type="conversation"
+                apiUrl="/api/socket/direct-messages"
+                query={{
+                    conversationId: conversation.id,
+                }}
             />
         </div>
     );
